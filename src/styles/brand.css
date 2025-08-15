@@ -1,0 +1,74 @@
+/* Brand Colors */
+:root {
+  --color-primary: #E63946;   /* Tomato Red */
+  --color-accent: #FFB703;    /* Cheese Yellow */
+  --color-bg: #F1FAEE;        /* Cream */
+  --color-dark: #1D3557;      /* Navy Blue */
+}
+
+/* Typography */
+body {
+  font-family: 'Poppins', 'Inter', Arial, sans-serif;
+  background: var(--color-bg);
+  color: var(--color-dark);
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  font-family: 'Poppins', 'Inter', Arial, sans-serif;
+  color: var(--color-primary);
+}
+
+.section-padding {
+  padding: 3rem 0;
+}
+
+.bg-cream { background: var(--color-bg); }
+.bg-dark { background: var(--color-dark); color: var(--color-bg); }
+.bg-primary { background: var(--color-primary); color: var(--color-bg); }
+.bg-accent { background: var(--color-accent); color: var(--color-dark); }
+
+.btn-primary {
+  background: var(--color-primary);
+  color: var(--color-bg);
+  border: none;
+}
+
+.btn-accent {
+  background: var(--color-accent);
+  color: var(--color-dark);
+  border: none;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  color: var(--color-primary) !important;
+  font-size: 1.5rem;
+}
+
+.nav-link {
+  color: var(--color-dark) !important;
+  font-weight: 500;
+  margin-right: 1rem;
+}
+
+.nav-link.active, .nav-link:focus {
+  color: var(--color-primary) !important;
+  border-bottom: 2px solid var(--color-primary);
+}
+
+.navbar {
+  background: var(--color-bg) !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding: 2rem 0;
+  }
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+}

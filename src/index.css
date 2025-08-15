@@ -1,0 +1,4 @@
+/* Minimal CSS reset */
+* {
+  box-sizing: border-box;
+}
