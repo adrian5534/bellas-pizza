@@ -4,3 +4,6 @@ html {
 body {
   overflow: auto !important;
 }
+body.modal-open {
+  overflow: auto !important;
+}
