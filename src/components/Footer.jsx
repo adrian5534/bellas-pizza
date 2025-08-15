@@ -20,14 +20,14 @@ function Footer() {
           {/* Logo & Name */}
           <div className="col-12 col-md-4 mb-4 mb-md-0 d-flex align-items-center justify-content-md-start justify-content-center">
             <img
-              src="/public/images/bella.png"
+              src="/images/bella.png"
               alt="Bella's Pizza Logo"
               style={{
                 width: 160,
                 height: 160,
                 marginRight: 28,
                 borderRadius: '50%',
-                background: '#f7f1ea',
+                background: '#f5f2eb',
                 objectFit: 'cover'
               }}
             />

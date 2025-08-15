@@ -14,7 +14,7 @@ function Navbar() {
               height: 48,
               marginRight: 12,
               borderRadius: '50%',
-              background: '#f7f1ea',
+              background: '#f5f2eb',
               objectFit: 'cover'
             }}
           />
