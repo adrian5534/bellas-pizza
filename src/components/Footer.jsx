@@ -63,7 +63,7 @@ function Footer() {
               © {new Date().getFullYear()} Bella's Pizza. All rights reserved.
             </div>
             <div style={{ fontSize: '0.95rem', color: 'var(--color-accent)' }}>
-              Credit: Adrian Reynolds &nbsp;|&nbsp; Powered by YSB Academy
+              Credits: Adrian Reynolds &nbsp;|&nbsp; Powered by YSB Academy
             </div>
           </div>
         </div>
