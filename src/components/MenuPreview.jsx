@@ -8,7 +8,7 @@ const menuData = {
       name: "Classic Pepperoni",
       price: "$15.00",
       desc: "Our signature pepperoni pizza with a rich tomato sauce.",
-      img: "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=400&q=80"
+      img: "https://images.unsplash.com/photo-1628840042765-356cda07504e?auto=format&fit=crop&w=400&q=80"
     },
     {
       name: "Four Cheese Pizza",
@@ -20,7 +20,7 @@ const menuData = {
       name: "BBQ Chicken Pizza",
       price: "$17.00",
       desc: "Grilled chicken, red onions, and tangy BBQ sauce.",
-      img: "https://images.unsplash.com/photo-1628840042765-356cda07504e?auto=format&fit=crop&w=400&q=80"
+      img: "https://images.unsplash.com/photo-1655471264223-b07ce84d521c?q=80&w=1411&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
       name: "Mushroom Truffle",
@@ -40,7 +40,7 @@ const menuData = {
       name: "Fettuccine Alfredo",
       price: "$13.50",
       desc: "Creamy Alfredo sauce over fettuccine noodles.",
-      img: "https://cdn.pixabay.com/photo/2024/05/05/01/08/pasta-8740051_1280.jpg"
+      img: "https://cdn.pixabay.com/photo/2024/01/12/16/51/ai-generated-8504384_1280.png"
     }
   ],
   Salads: [
@@ -109,45 +109,35 @@ function MenuPreview() {
         <div className="row g-4">
           {menuData[activeTab].map((item, idx) => (
             <div className="col-lg-4 col-md-6 col-12 d-flex" key={idx}>
-              <div
-                className="w-100 d-flex"
-                style={{
-                  background: 'var(--color-bg)',
-                  border: '1.5px solid var(--color-dark)',
-                  borderRadius: '18px',
-                  boxShadow: '0 2px 8px rgba(29,53,87,0.04)',
-                  minHeight: '260px',
-                  overflow: 'hidden',
-                  width: '100%'
-                }}
-              >
-                <div style={{
-                  flex: '0 0 50%',
-                  height: '100%',
-                  display: 'flex'
-                }}>
+              <div className="w-100 d-flex menu-card">
+                <div className="menu-card-img">
                   <img
                     src={item.img}
                     alt={item.name}
-                    style={{
-                      width: '100%',
-                      height: '100%',
-                      objectFit: 'cover',
-                      borderRadius: '18px 0 0 18px',
-                      display: 'block'
-                    }}
+                    className="menu-img"
                   />
                 </div>
-                <div className="d-flex flex-column justify-content-center px-4 py-3" style={{ flex: 1 }}>
-                  <h5 style={{ color: 'var(--color-primary)', fontWeight: 700, fontSize: '1.25rem', marginBottom: 10 }}>
+                <div className="d-flex flex-column justify-content-center px-4 py-3 menu-card-body">
+                  <h5 className="menu-card-title">
                     {item.name}
                   </h5>
-                  <p style={{ color: 'var(--color-dark)', fontSize: '1.05rem', marginBottom: 10 }}>
+                  <p className="menu-card-desc">
                     {item.desc}
                   </p>
-                  <span style={{ color: 'var(--color-primary)', fontWeight: 600, fontSize: '1.1rem' }}>
+                  <span className="menu-card-price">
                     {item.price}
                   </span>
+                  <button
+                    className="btn btn-sm mt-3 menu-card-add"
+                    style={{
+                      fontWeight: 600,
+                      borderRadius: '6px',
+                      padding: '0.4rem 1.2rem',
+                      alignSelf: 'flex-start'
+                    }}
+                  >
+                    Add
+                  </button>
                 </div>
               </div>
             </div>

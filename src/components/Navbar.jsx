@@ -3,7 +3,7 @@ import '../styles/brand.css'
 import { useEffect } from 'react'
 
 function Navbar() {
-  // Fix for anchor navigation in React (ensures scroll and closes offcanvas)
+  // Fix for anchor navigation in React (ensures scroll and closes offcanvas, removes backdrop)
   useEffect(() => {
     const handleOffcanvasLinks = (e) => {
       const target = e.target;
@@ -23,10 +23,31 @@ function Navbar() {
           section.scrollIntoView({ behavior: 'smooth' });
           e.preventDefault();
         }
+        // Ensure body is scrollable after closing
+        document.body.style.overflow = 'auto';
+        document.body.classList.remove('modal-open');
+        // Remove any remaining backdrop
+        setTimeout(() => {
+          document.querySelectorAll('.offcanvas-backdrop').forEach(bd => bd.remove());
+        }, 300);
       }
     };
+
+    // Remove backdrop on offcanvas show/hide
+    const removeBackdrop = () => {
+      document.querySelectorAll('.offcanvas-backdrop').forEach(bd => bd.remove());
+      document.body.style.overflow = 'auto';
+      document.body.classList.remove('modal-open');
+    };
+    document.addEventListener('shown.bs.offcanvas', removeBackdrop);
+    document.addEventListener('hidden.bs.offcanvas', removeBackdrop);
+
     document.addEventListener('click', handleOffcanvasLinks);
-    return () => document.removeEventListener('click', handleOffcanvasLinks);
+    return () => {
+      document.removeEventListener('click', handleOffcanvasLinks);
+      document.removeEventListener('shown.bs.offcanvas', removeBackdrop);
+      document.removeEventListener('hidden.bs.offcanvas', removeBackdrop);
+    };
   }, []);
 
   return (
