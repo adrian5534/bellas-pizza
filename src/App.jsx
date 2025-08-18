@@ -1,5 +1,6 @@
 import Navbar from './components/Navbar'
 import './styles/brand.css'
+import '/App.css' 
 import HeroSection from './components/HeroSection'
 import Specials from './components/Specials'
 import MenuPreview from './components/MenuPreview'

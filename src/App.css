@@ -1,0 +1,63 @@
+.menu-card-add {
+  background: var(--color-accent);
+  color: var(--color-dark);
+  border: none;
+  font-weight: 600;
+  border-radius: 6px;
+  padding: 0.4rem 1.2rem;
+  align-self: flex-start;
+  margin-top: 1rem;
+  transition: background 0.2s;
+  display: inline-block;
+}
+
+.menu-card-add:hover {
+  background: var(--color-primary);
+  color: var(--color-bg);
+}
+
+@media (max-width: 768px) {
+  .menu-card-add {
+    width: 100%;
+    align-self: stretch;
+    margin-top: 1rem;
+    font-size: 1rem;
+    display: block;
+    text-align: center;
+  }
+}
+
+.footer .footer-social a,
+.menu-card .bi,
+.contact-section .bi {
+  font-size: 1.5rem !important;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .footer .footer-social {
+    justify-content: flex-start;
+    gap: 16px;
+  }
+  .footer .footer-social a {
+    font-size: 1.3rem !important;
+  }
+}
+
+.btn {
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 0.6rem 1.5rem;
+  border: none;
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .btn {
+    width: 100%;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    text-align: center;
+  }
+}
