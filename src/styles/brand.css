@@ -384,10 +384,11 @@ h1, h2, h3, h4, h5, h6 {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start; /* Keep text at top */
   min-width: 0;
   min-height: 0;
-  padding-bottom: 1.5rem;
+  padding: 1rem 1rem 1.5rem 1rem; /* Add bottom padding for button */
+  position: relative;
 }
 .menu-card-title {
   color: var(--color-primary);
@@ -405,20 +406,24 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   font-size: 1.1rem;
 }
+
 .menu-card-add {
   background: var(--color-accent);
   color: var(--color-dark);
   border: none;
   font-weight: 600;
   border-radius: 6px;
-  padding: 0.4rem 1.2rem;
-  align-self: flex-start;
-  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  margin-top: auto; /* Push button to bottom */
+  margin-bottom: 0;
   transition: background 0.2s;
   display: block;
-  max-width: 100%;
+  width: 100%;
+  text-align: center;
   box-sizing: border-box;
   word-break: break-word;
+  position: relative;
+  z-index: 2;
 }
 
 .menu-card-add:hover {
