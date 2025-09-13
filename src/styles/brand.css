@@ -487,9 +487,7 @@ h1, h2, h3, h4, h5, h6 {
     object-fit: cover;
     display: block;
   }
-  .menu-card-body {
-    padding: 0.8rem 0.8rem 1.5rem 0.8rem !important; /* Extra bottom padding */
-  }
+
   .menu-card-title {
     font-size: 1rem !important;
   }
