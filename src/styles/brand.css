@@ -385,6 +385,8 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  min-width: 0;
+  min-height: 0;
 }
 .menu-card-title {
   color: var(--color-primary);
@@ -412,7 +414,12 @@ h1, h2, h3, h4, h5, h6 {
   align-self: flex-start;
   margin-top: 1rem;
   transition: background 0.2s;
+  display: block;
+  max-width: 100%;
+  box-sizing: border-box;
+  word-break: break-word;
 }
+
 .menu-card-add:hover {
   background: var(--color-accent);
   color: var(--color-dark);
@@ -445,12 +452,17 @@ h1, h2, h3, h4, h5, h6 {
     display: flex !important;
     flex-direction: column !important;
     justify-content: center !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
   }
   .menu-card-add {
     width: 100%;
     align-self: stretch;
     margin-top: 1rem;
     font-size: 1rem;
+    text-align: center;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 }
 
