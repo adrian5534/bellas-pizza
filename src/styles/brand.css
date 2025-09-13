@@ -362,7 +362,7 @@ h1, h2, h3, h4, h5, h6 {
   border: 1.5px solid var(--color-dark);
   border-radius: 18px;
   box-shadow: 0 2px 8px rgba(29,53,87,0.04);
-  min-height: 260px;
+  min-height: 280px;
   overflow: hidden;
   width: 100%;
   display: flex;
