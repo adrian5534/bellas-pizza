@@ -19,5 +19,8 @@ export default defineConfig({
       }
     },
     chunkSizeWarningLimit: 1000 // (optional) increase limit to suppress warning
+  },
+  css: {
+    minify: false
   }
 })
