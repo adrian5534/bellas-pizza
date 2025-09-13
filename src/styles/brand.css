@@ -388,7 +388,7 @@ h1, h2, h3, h4, h5, h6 {
   min-width: 0;
   min-height: 0;
   padding: 1rem 1rem 1.5rem 1rem; /* Add bottom padding for button */
-  padding-bottom: 2.5rem !important;
+  padding-bottom: 3.5rem !important;
   position: relative;
 }
 .menu-card-title {
