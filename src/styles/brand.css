@@ -414,7 +414,6 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0.4rem 1.2rem;
   align-self: flex-start;
   margin-top: 1rem;
-  margin-bottom: 0;
   transition: background 0.2s;
   display: block;
   max-width: 100%;
@@ -449,7 +448,7 @@ h1, h2, h3, h4, h5, h6 {
     display: block;
   }
   .menu-card-body {
-    padding: 1rem 1rem 2rem 1rem !important;
+    padding: 1rem !important;
     flex: 1 1 auto !important;
     display: flex !important;
     flex-direction: column !important;
