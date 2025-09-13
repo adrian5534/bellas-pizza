@@ -8,5 +8,16 @@ export default defineConfig({
     legacy({
       targets: ['defaults', 'not IE 11']
     })
-  ]
+  ],
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          react: ['react', 'react-dom'],
+          bootstrap: ['bootstrap'],
+        }
+      }
+    },
+    chunkSizeWarningLimit: 1000 // (optional) increase limit to suppress warning
+  }
 })
