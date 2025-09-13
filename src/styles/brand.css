@@ -506,7 +506,7 @@ h1, h2, h3, h4, h5, h6 {
   }
   .menu-card-body {
     padding-top: 1rem !important;   /* Add top padding for spacing */
-    padding-bottom: calc(3.5rem + env(safe-area-inset-bottom)) !important;
+    padding-bottom: 3.5rem !important;
     justify-content: flex-start !important; /* Keep text at top */
   }
 }
